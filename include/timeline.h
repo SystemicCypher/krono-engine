@@ -1,20 +1,21 @@
-#include "event.h"
 #include <string>
 #include <map>
 #include <utility>
+#include <vector>
+#include "event.h"
 
 class Timeline{
 public:
 // The timeline constructor
 // It creates a timeline object 
-// that has a l
+// that has a 
 	Timeline();
 
 // takes in an index to a byte - returns the byte's interpretation
 // basically returning the flag definition
 	std::string flag_status(size_t byte_index);
 	std::string flag_status(size_t byte_index, size_t bit_index);
-       	std::string flag_status(size_t byte_index, size_t bit_index_start, size_t bit_index_end);
+    std::string flag_status(size_t byte_index, size_t bit_index_start, size_t bit_index_end);
 
 // The timeline is being changed in some capacity, this changes some flags
 	bool timeline_change(size_t byte_index, size_t bit_index_start, size_t bit_index_end);	
@@ -31,5 +32,5 @@ private:
 
 // A vector of history objects (Events)
 // This is what the present state of the timeline is
-	vector<Event> history;
+	std::vector<Event> history;
 };
