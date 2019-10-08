@@ -2,7 +2,8 @@
 #include <map>
 #include <utility>
 #include <vector>
-#include "event.h"
+
+#include "timeperiod.h"
 
 class Timeline{
 public:
@@ -30,7 +31,7 @@ private:
 // The structure is yet to be defined
 	char* flags;
 
-// A vector of history objects (Events)
+// A vector of time period objects (Timeperiods)
 // This is what the present state of the timeline is
-	std::vector<Event> history;
+	std::vector<TimePeriod> time;
 };
