@@ -12,7 +12,7 @@ It defines how characters work in the game.
 class Character{
 public:
     Character();
-    Character(char* name);
+    Character(char* name, int hp, int mp);
 
     const int getStats(StatID stat);
     void setStats(StatID stat, int value);
